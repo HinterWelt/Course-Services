@@ -22,7 +22,7 @@ import org.springframework.web.client.RestTemplate;
 @PropertySource("classpath:secure.properties")
 public class MoodleDaoImpl extends Exception implements CourseDao{
 
-    private final String restMoodleURI = "http://moodle.hinterwelt.org/webservice/rest/server.php?wstoken=";
+    private String restMoodleURI;
     private String vletoken;
     private final String requestFormat = "&moodlewsrestformat=json";
 

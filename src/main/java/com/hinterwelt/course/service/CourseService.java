@@ -16,12 +16,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class CourseService {
 
-    @Autowired
     @Qualifier("moodle")
+
+    @Autowired
     private CourseDao courseDao;
 
     /**
      * Any course business logic would go here.
+     *
      * @return
      */
     public List<Course> getAllCourses() {
@@ -29,8 +31,9 @@ public class CourseService {
     }
 
     /**
-     * Any business logic for the list of enrolled students and
-     * their courses would go here.
+     * Any business logic for the list of enrolled students and their courses
+     * would go here.
+     *
      * @param id
      * @return
      * @throws java.lang.Exception
@@ -60,7 +63,7 @@ public class CourseService {
     }
 
     /**
-     * 
+     *
      * @param course
      */
     public void insertCourse(CreateCourseEntity course) {
